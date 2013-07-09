@@ -40,20 +40,23 @@
     list.push(i);
   }
 
-  // Catch primes and eliminate multiples
-  for (var i = 0, len = list.length; i <= len; i++) {
+  // Find primes and eliminate their multiples
+  var len = list.length;
+  for (i = 0, limit = Math.sqrt(len); i <= limit; i++) {
     if (list[i]) {
-      prime = list[i];
-      result.push(prime);
-      for (var pos = i; pos < len; pos += prime) {
+      for (var pos = i + list[i]; pos < len; pos += list[i]) {
         list[pos] = 0;
       }
     }
   }
 
+  for (i = 0; i <= len; i++) {
+    list[i] && result.push(list[i]);
+  }
+
   // Trim result from given start and return
   if (start !== 2) {
-    for (var i = 0, len = result.length; i <= len; i++) {
+    for (i = 0; i <= len; i++) {
       if (result[i] >= start) {
         return result.slice(i);
       }
