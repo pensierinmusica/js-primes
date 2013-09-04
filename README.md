@@ -2,7 +2,7 @@
 
 ## Description
 
-JavaScript functions to find prime numbers.
+JavaScript functions to find prime numbers, using the [Sieve of Atkin](http://en.wikipedia.org/wiki/Sieve_of_Atkin).
 
 ## Notes
 
