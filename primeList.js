@@ -1,14 +1,14 @@
 /**
  * Prime List
- * 
+ *
  * A JavaScript function that returns all the prime numbers within a given range.
- * 
+ *
  * The MIT License (MIT)
  * Copyright (c) Alessandro Zanardi
- * 
+ *
  */
 
- var primeList = function(start, end) {
+var primeList = function(start, end) {
   // Validate input and initialize storage for result
   if (isNaN(start) || start < 1 || Math.floor(start) != start) {
     return 'The starting number must be a positive integer, please enter a correct value';
@@ -19,18 +19,17 @@
   if (end < start) {
     return 'The ending number must be a positive integer, greater or equal to the starting number';
   }
-
   if (end === 1) {
-    return [1];
+    return 'The ending number must be bigger than 1, since 1 is not a prime number';
   }
+
   if (end === 2) {
-    return [1,2];
+    return [2];
   }
 
   var prime;
   var result = [];
   if (start === 1) {
-    result.push(1);
     start++;
   }
 
