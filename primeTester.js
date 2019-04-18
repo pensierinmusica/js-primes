@@ -17,13 +17,13 @@ var primeTester = function(n) {
     return true;
   }
   if (n % 2 === 0) {
-    return false;
+    return false
   }
   // Check if number is prime
   for (var i = 3, limit = Math.sqrt(n); i <= limit; i+=2) {
     if (n % i === 0) {
-      return false;
+      return false
     }
   }
-  return true;
+  return true
 };
